@@ -22,4 +22,7 @@ def merge(x: list[int], y: list[int]) -> list[int]:
         else:
             z.append(y[j])
             j += 1
-    return z + x[i:] + y[j:]
+            
+    z.extend(x[i:])
+    z.extend(y[j:])
+    return z
